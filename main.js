@@ -18,6 +18,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
   const backToTopBtn = document.querySelector(".back-to-top-btn");
 
+  const navLinks = document.querySelector(".nav-links");
+  const hideLinksBtn = document.querySelector(".hide-links-btn");
+  const showLinksBtn = document.querySelector(".show-links-btn");
+
   // Changing Background Color
   switchBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-body");
@@ -61,5 +65,15 @@ window.addEventListener("DOMContentLoaded", () => {
       backToTopBtn.style.display = "none";
       logo.style.transform = "scale(1)";
     }
+  });
+
+  // Show Navigation Links
+  showLinksBtn.addEventListener("click", () => {
+    navLinks.style.right = "0";
+  });
+
+  // Hide Navigation Links
+  hideLinksBtn.addEventListener("click", () => {
+    navLinks.style.right = "-160px";
   });
 });
